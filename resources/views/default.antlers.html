@@ -1,1 +1,32 @@
-{{ content }}
+<div class="border-b-2 p-8">
+    <strong>from site without `src` attribute</strong><br>
+    {{ partial:partials/without_slot }}
+
+    {{ partial:partials/with_slot }}
+        {{ loop times="10" }}
+            <div>{{ value }}</div>
+        {{ /loop }}
+    {{ /partial:partials/with_slot }}
+</div>
+
+
+<div class="border-b-2 p-8">
+    <strong>from site with `src` attribute</strong><br>
+    {{ partial src="partials/without_slot" }}{{# {{ /partial }} #}}
+
+    {{ partial src="partials/with_slot" }}
+        {{ loop times="10" }}
+            <div>{{ value }}</div>
+        {{ /loop }}
+    {{ /partial }}
+</div>
+
+<div class="border-b-2 p-8">
+    <strong>from addon with `src` attribute</strong><br>
+    {{ partial src="dummy::partials/without_slot" }}{{# {{ /partial }} #}}
+    {{ partial src="dummy::partials/with_slot" }}
+        {{ loop times="10" }}
+            <div>{{ value }}</div>
+        {{ /loop }}
+    {{ /partial }}
+</div>
