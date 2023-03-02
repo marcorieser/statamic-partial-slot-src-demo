@@ -12,7 +12,7 @@
 
 <div class="border-b-2 p-8">
     <strong>from site with `src` attribute</strong><br>
-    {{ partial src="partials/without_slot" }}{{# {{ /partial }} #}}
+    {{ partial src="partials/without_slot" /}}
 
     {{ partial src="partials/with_slot" }}
         {{ loop times="10" }}
@@ -23,7 +23,7 @@
 
 <div class="border-b-2 p-8">
     <strong>from addon with `src` attribute</strong><br>
-    {{ partial src="dummy::partials/without_slot" }}{{# {{ /partial }} #}}
+    {{ partial src="dummy::partials/without_slot" /}}
     {{ partial src="dummy::partials/with_slot" }}
         {{ loop times="10" }}
             <div>{{ value }}</div>
