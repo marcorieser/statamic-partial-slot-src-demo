@@ -1,0 +1,19 @@
+{
+    "name": "marcorieser/dummy",
+    "autoload": {
+        "psr-4": {
+            "Marcorieser\\Dummy\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Dummy",
+            "description": "Dummy addon"
+        },
+        "laravel": {
+            "providers": [
+                "Marcorieser\\Dummy\\ServiceProvider"
+            ]
+        }
+    }
+}

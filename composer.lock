@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "907d3a7597a5a3dba27e053e9b3b2c3e",
+    "content-hash": "d0216ac4eec78653fb3e95ca3d121c16",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -3148,6 +3148,35 @@
                 }
             ],
             "time": "2022-12-08T12:29:14+00:00"
+        },
+        {
+            "name": "marcorieser/dummy",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "addons/marcorieser/dummy",
+                "reference": "bb7870fa613c952fa5e552a90b9b1dd886fef8f6"
+            },
+            "type": "library",
+            "extra": {
+                "statamic": {
+                    "name": "Dummy",
+                    "description": "Dummy addon"
+                },
+                "laravel": {
+                    "providers": [
+                        "Marcorieser\\Dummy\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Marcorieser\\Dummy\\": "src"
+                }
+            },
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "michelf/php-smartypants",
